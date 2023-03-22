@@ -5,9 +5,9 @@ export const TodoList = (props) => {
   return (
     <div>
         <ul>
-            {props.listItems.map((item) => (
-               <li> {props.listItems[item]} </li>
-            ))}
+            {props.listItems.map((item) => {
+               return item
+            })}
         </ul>
     </div>
   )
