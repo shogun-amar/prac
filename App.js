@@ -6,7 +6,6 @@ import { FaTrash } from "react-icons/fa";
 function App() {
   const [list, setList] = useState([])
   const [todo, setTodo] = useState("")
-  const [canEdit, setcanEdit] = useState(true)
 
   const handleChange = (event) => {
     setTodo(event.target.value);
