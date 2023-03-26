@@ -54,6 +54,17 @@ function App() {
     }
   };
 
+  const handleDeleteAllTasks = () => {
+    const deletedList = []
+    setList(deletedList)
+  }
+
+  const handleDeleteDoneTasks = () => {
+    const deletedDoneList = list.filter((item) => item.isCompleted === false);
+    setList(deletedDoneList)
+  }
+
+
   return (
     <div className="App">
       <div>
@@ -91,6 +102,10 @@ function App() {
             </div>
           );
         })}
+      </div>
+      <div>
+        <button className='btn btn-danger' onClick={handleDeleteDoneTasks}> Delete Done Tasks</button>
+        <button className='btn btn-danger' onClick={handleDeleteAllTasks}> Delete All Tasks </button>
       </div>
     </div>
   );
